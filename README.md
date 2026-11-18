@@ -142,6 +142,21 @@ Choosing well is half the game. A few heuristics that hold up in practice:
   (kit → build → bundle → check → submit). A modest bounty you actually finish beats a
   flagship bounty you abandon at 80%.
 
+A two-minute pre-flight checklist before you commit to any bounty:
+
+| Question | Where to find the answer |
+|---|---|
+| What exactly must the entry contain? | The rules section of the bounty page, and `RULES.txt` in the kit |
+| How is it scored — benchmark, judged, or referral count? | The rules; this decides what "good" means |
+| How many places are paid, and what is the last paid place worth? | The rewards table |
+| When do entries close, in my local time? | The phases section — convert from UTC immediately |
+| What is the entry quota per day and in total? | `status --competition <bounty-slug>` once you have the kit |
+| Does it need anything I do not have (funds, another account, special software)? | The prerequisites note on the bounty page |
+
+If any answer surprises you, better now than after three hours of building. A bounty that
+needs real money from your wallet, or an account you cannot create, is a bounty to skip —
+there is always another one.
+
 ## Step 3 — Download the bounty kit
 
 Every bounty has a **kit**: the rules word for word, the data, a starter entry where one
@@ -321,6 +336,19 @@ These cost real submissions to learn. They are free for you:
    being kept/graded. A submission that was never kept can never win.
 8. **Mind the clock in your own timezone.** Closing times are published in UTC. Convert
    them once, write the local time down, and set your own earlier deadline.
+9. **Re-download the kit before the final push.** Kits are revised while a bounty runs —
+   rules get clarified and tools get fixed. Bundling with a stale kit can mean bundling
+   against yesterday's rules. A fresh download takes seconds.
+10. **Anchor every repository to its own account.** If you ever work with more than one
+    make.fun account, a repository created for one account cannot be entered under
+    another — the ownership check will refuse it. Start a fresh repository, anchored to
+    the entering account, every time.
+
+One pattern worth copying from experienced entrants: **probe, measure, then commit.**
+Enter a solid first version early enough to see a real grade or leaderboard position, and
+let that measurement — not optimism — decide whether a second, improved submission is
+worth the quota. And when a revised version is not measurably better by your own local
+measure, keep the old one. Hope is not an upgrade.
 
 ## Prefer to hand the whole job to your agent?
 
@@ -407,6 +435,25 @@ you have quota left. Guard that quota: it is the real limit on comebacks.
 After final results are posted, placing entries can claim their prize in USDC on Solana
 to the wallet the entry was signed with, following an automatic sanctions screen. Claims
 are made from your profile or with the kit's `claim` command.
+</details>
+
+<details>
+<summary><strong>A bounty asks for an entry fee or real funds. Should I pay?</strong></summary>
+
+Only ever from a wallet you control, only the amount the bounty page states, and only
+after reading why the bounty needs it. Most bounties are free; the fee-charging ones add
+the fees to the prize pool. If a bounty asks you to send money somewhere other than its
+own stated entry flow, stop — that is not how make.fun works.
+</details>
+
+<details>
+<summary><strong>How long until I know the result?</strong></summary>
+
+Entries close at the published deadline, but final results often land days later:
+grading every entry the same way, plus final re-checks (for referral bounties, verifying
+signups and re-reading repositories), takes time. Your `status` and the bounty page show
+the scheduled result date. A strong early leaderboard position is provisional until then —
+fields grow, and late entries can be strong.
 </details>
 
 <details>
